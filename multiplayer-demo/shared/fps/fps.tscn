@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=3 uid="uid://dal5l1s6noy0r"]
+
+[ext_resource type="Script" uid="uid://cj3gkmprg1obd" path="res://shared/fps/fps.gd" id="1_sxd7x"]
+[ext_resource type="ButtonGroup" path="res://shared/fps/fps average buttons.tres" id="2_y8rrk"]
+
+[node name="fps" type="Button"]
+custom_minimum_size = Vector2(100, 0)
+offset_left = 1050.0
+offset_right = 1150.0
+offset_bottom = 31.0
+toggle_mode = true
+text = "TEST"
+alignment = 0
+script = ExtResource("1_sxd7x")
+
+[node name="recent avg" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 0
+offset_top = 93.0
+offset_right = 100.0
+offset_bottom = 124.0
+toggle_mode = true
+button_pressed = true
+button_group = ExtResource("2_y8rrk")
+text = "RECENT"
+alignment = 0
+
+[node name="overall avg" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 0
+offset_top = 124.0
+offset_right = 100.0
+offset_bottom = 155.0
+toggle_mode = true
+button_group = ExtResource("2_y8rrk")
+text = "OVERALL"
+alignment = 0
+
+[node name="min" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 0
+offset_top = 31.0
+offset_right = 41.0
+offset_bottom = 62.0
+text = "MIN"
+alignment = 0
+
+[node name="max" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 0
+offset_top = 62.0
+offset_right = 44.0
+offset_bottom = 93.0
+text = "MAX"
+alignment = 0
+
+[node name="recent" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="overall" type="Timer" parent="."]
+wait_time = 30.0
+autostart = true
+
+[connection signal="toggled" from="." to="." method="_on_toggled"]
+[connection signal="pressed" from="recent avg" to="." method="_on_recent_avg_pressed"]
+[connection signal="pressed" from="overall avg" to="." method="_on_overall_avg_pressed"]
+[connection signal="pressed" from="min" to="." method="_on_min_pressed"]
+[connection signal="pressed" from="max" to="." method="_on_max_pressed"]
+[connection signal="timeout" from="recent" to="." method="_on_recent_timeout"]
+[connection signal="timeout" from="overall" to="." method="_on_overall_timeout"]

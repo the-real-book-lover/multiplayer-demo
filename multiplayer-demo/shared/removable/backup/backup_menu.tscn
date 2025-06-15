@@ -1,0 +1,108 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctpq0u7b27tc8"]
+
+[ext_resource type="Script" uid="uid://dod541hloiuwq" path="res://shared/removable/backup/backup_menu.gd" id="1_3m1vr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1xkt1"]
+bg_color = Color(0, 0, 0, 0.603922)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+shadow_color = Color(0, 0, 0, 0.32549)
+shadow_size = 1
+
+[sub_resource type="Theme" id="Theme_vdjc7"]
+Panel/styles/panel = SubResource("StyleBoxFlat_1xkt1")
+panel/base_type = &"9panel"
+
+[node name="menu" type="CanvasLayer"]
+layer = 128
+visible = false
+script = ExtResource("1_3m1vr")
+
+[node name="bg" type="Panel" parent="."]
+offset_right = 420.0
+offset_bottom = 200.0
+theme = SubResource("Theme_vdjc7")
+
+[node name="confirm" type="Button" parent="."]
+modulate = Color(0.0823529, 1, 0.490196, 1)
+offset_left = 4.0
+offset_top = 78.0
+offset_right = 75.0
+offset_bottom = 109.0
+text = "Confirm"
+
+[node name="discard" type="Button" parent="."]
+modulate = Color(1, 0.202667, 0.08, 1)
+offset_left = 77.0
+offset_top = 78.0
+offset_right = 144.0
+offset_bottom = 109.0
+text = "Discard"
+
+[node name="name entry" type="LineEdit" parent="."]
+custom_minimum_size = Vector2(250, 0)
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 256.0
+offset_bottom = 37.0
+placeholder_text = "Enter backup name:"
+
+[node name="project" type="CheckButton" parent="."]
+offset_left = 257.0
+offset_top = 5.0
+offset_right = 414.0
+offset_bottom = 36.0
+text = "Add project"
+
+[node name="month" type="CheckButton" parent="."]
+offset_left = 257.0
+offset_top = 38.0
+offset_right = 414.0
+offset_bottom = 69.0
+text = "Add month"
+
+[node name="date" type="CheckButton" parent="."]
+offset_left = 257.0
+offset_top = 70.0
+offset_right = 414.0
+offset_bottom = 101.0
+text = "Add date"
+
+[node name="time" type="CheckButton" parent="."]
+offset_left = 257.0
+offset_top = 103.0
+offset_right = 414.0
+offset_bottom = 134.0
+text = "Add time"
+
+[node name="error" type="Label" parent="."]
+visible = false
+offset_left = 10.0
+offset_top = 146.0
+offset_right = 193.0
+offset_bottom = 169.0
+text = "EXAMPLE TEXT ERROR"
+
+[node name="display" type="Label" parent="."]
+offset_left = 10.0
+offset_top = 169.0
+offset_right = 192.0
+offset_bottom = 192.0
+text = "EXAMPLE TEXT DISPLAY"
+
+[node name="override" type="CheckBox" parent="."]
+visible = false
+offset_left = 215.0
+offset_top = 134.0
+offset_right = 417.0
+offset_bottom = 165.0
+text = "Overide and overwrite"
+
+[node name="subfolder" type="CheckBox" parent="."]
+offset_left = 5.0
+offset_top = 42.0
+offset_right = 176.0
+offset_bottom = 73.0
+text = "Create subfolder"

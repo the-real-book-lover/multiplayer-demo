@@ -1,0 +1,113 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfx5tynrdnhrc"]
+
+[ext_resource type="Script" uid="uid://ft5b2x1kroxu" path="res://shared/removable/debug/comparisons/comparison.gd" id="1_vbv4b"]
+[ext_resource type="Texture2D" uid="uid://3r085oyw0pm7" path="res://main/items/decor/type/chair/chair.png" id="2_y3o4x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3o4x"]
+resource_local_to_scene = true
+atlas = ExtResource("2_y3o4x")
+
+[node name="comparison" type="Control"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vbv4b")
+
+[node name="clear" type="Button" parent="."]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -36.0
+offset_right = 44.0
+offset_bottom = -5.0
+text = "clear"
+
+[node name="img" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_y3o4x")
+centered = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Label7" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Label8" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Label9" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Label10" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Label11" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Label12" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Label13" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Label14" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Label15" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="pressed" from="clear" to="." method="_on_clear_pressed"]

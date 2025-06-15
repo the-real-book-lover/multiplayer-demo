@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://kdewhoaj4a0b"]
+
+[ext_resource type="Script" uid="uid://dgmulxjkm3e3i" path="res://shared/removable/debug/search.gd" id="1_dyre5"]
+
+[node name="search" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dyre5")
+
+[node name="button" type="Button" parent="."]
+custom_minimum_size = Vector2(10, 31)
+layout_mode = 0
+offset_left = 27.0
+offset_top = 2.0
+offset_right = 37.0
+offset_bottom = 10.0
+
+[node name="x" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 19.0
+offset_bottom = 32.0
+text = "X"
+
+[connection signal="pressed" from="button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="x" to="." method="_on_x_pressed"]
